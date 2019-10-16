@@ -1,0 +1,7 @@
+#!/bin/sh
+
+for mac in "$@"
+
+do echo $mac | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]' | fold -w4 | paste -sd'.' -
+
+done
